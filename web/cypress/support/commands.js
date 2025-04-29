@@ -34,3 +34,8 @@ Cypress.Commands.add('submitLoginForm', (email, senha) => {
     cy.get('#password').type(senha)
     cy.contains('button', 'Entrar').click()
 })
+
+
+Cypress.Commands.add('goToSignup', () => {
+  cy.visit('/register');
+});
